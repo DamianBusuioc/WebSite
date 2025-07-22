@@ -1,0 +1,441 @@
+/* Reset simplu */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1e1e2f;
+  color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #00bcd4;
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Hero text */
+.hero-text {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #f5f5f5, #ffffff);
+  margin-bottom: 40px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Main content */
+main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+}
+
+/* Product cards */
+.product {
+  background-color: white;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.product h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+.product p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+/* Reviews */
+.reviews {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.review {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.review strong {
+  color: #34495e;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 2rem;
+}
+
+/* Contact form */
+.contact-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px #00bcd4;
+}
+
+.contact-form button {
+  background-color: #00bcd4;
+  color: white;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+  background-color: #0097a7;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 1rem 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product {
+    grid-template-columns: 1fr;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Efect hover pentru butoane */
+button:hover,
+button:focus {
+  background-color: #0097a7;
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.6);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+/* Efect hover pentru imagini produse */
+.product img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product img:hover,
+.product img:focus {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.reviews-slider {
+  position: relative;
+  max-width: 500px;
+  margin-top: 1rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  overflow: hidden;
+}
+
+.reviews-container {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.review {
+  min-width: 100%;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  display: none;
+}
+
+.review.active {
+  display: block;
+}
+
+.reviews-slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00bcd4;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 0 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.reviews-slider .prev {
+  left: 10px;
+}
+
+.reviews-slider .next {
+  right: 10px;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .product {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+}
+
+img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact-section, main, header {
+    padding: 20px;
+  }
+  .product {
+    flex-direction: column;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+header .hero {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero .cta-btn {
+  background: #00aced;
+  padding: 1rem 2rem;
+  color: white;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,172,237,0.6);
+  transition: transform 0.3s;
+}
+.hero .cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* About page specific styles */
+
+.hero-text {
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.5);
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+main section {
+  margin-bottom: 40px;
+}
+
+main h3 {
+  color: #00bcd4;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  border-left: 6px solid #0097a7;
+  padding-left: 12px;
+}
+
+main ul {
+  list-style-type: disc;
+  padding-left: 30px;
+  color: #555;
+}
+
+main ul li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  margin-top: auto;
+  letter-spacing: 0.05em;
+}
